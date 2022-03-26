@@ -141,7 +141,7 @@ def main():
     run = True
     clock = pygame.time.Clock()
 
-    n = 75
+    n = 50
     min_val = 0 
     max_val = 100
 
@@ -193,7 +193,6 @@ def main():
                 sorting_algo_name = "Bubble Sort"
     
     pygame.quit()
-
 
 
 if __name__ == "__main__":
