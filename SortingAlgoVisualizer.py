@@ -123,7 +123,17 @@ def insertion_sort(draw_info, ascending=True):
 
         while True:
             ascending_sort = i>0 and lst[i-1]>current and ascending
-           descending_sort = i>0 and lst[i-1]<current and not ascending
+            descending_sort = i>0 and lst[i-1]<current and not ascending
+
+            if not ascending_sort and not descending_sort:
+                break
+            lst[i] = lst[i-1]
+            i - i-1
+            lst[i] = current
+            draw_list(draw_info, {i-1:draw_info.GREEN, i:draw_info.RED})
+            yield True
+
+    return lst
 
 
 
@@ -145,7 +155,7 @@ def main():
     sorting_algorithm_generator = None
 
     while run:
-        clock.tick(60)
+        clock.tick(120)
 
         if sorting:
             try:
@@ -175,6 +185,12 @@ def main():
                 ascending = True
             elif event.key == pygame.K_d and not sorting:
                 ascending = False
+            elif event.key == pygame.K_i and not sorting:
+                sorting_algorithm = insertion_sort
+                sorting_algo_name = "Insertion Sort"
+            elif event.key == pygame.K_b and not sorting:
+                sorting_algorithm = bubble_sort
+                sorting_algo_name = "Bubble Sort"
     
     pygame.quit()
 
