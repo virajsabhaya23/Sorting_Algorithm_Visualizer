@@ -17,3 +17,8 @@ class DrawInfo:
         self.height = height
         
         self.widnow = pygame.display.set_mode((width, height))
+        pygame.display.set_caption("Sorting Algo. Visualizer")
+        self.set_lst(lst)
+    
+    def set_lst(self,lst):
+        pass
